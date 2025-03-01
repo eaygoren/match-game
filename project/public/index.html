@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #logo {
+            width: 100%;
+            max-width: 150px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('assets/environment/pattern.png');
+            background-repeat: repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Oyunun başlığı -->
+    <title>Word Puzzle</title>
+</head>
+
+<body style="background-color: #1e1e37; margin: 0; padding: 0; overflow: hidden;">
+    <!-- Oyunun render edileceği container -->
+    <div id="Container"></div>
+    <!-- Arkaplan -->
+    <div id="bg"></div>
+    <!-- Logo -->
+    <img id="logo" src="assets/environment/logo.png" alt="loading">
+</body>
+
+</html>
