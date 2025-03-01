@@ -1,5 +1,5 @@
 import * as PIXI from "pixi.js";
-import { GAME_HEIGHT, GAME_WIDTH, LETTER_POSITIONS, WORDS, BOX_POSITIONS } from "./Configs";
+import { GAME_HEIGHT, GAME_WIDTH, LETTER_POSITIONS, WORDS, BOX_POSITIONS, COORDINATES, ALIGNMENTS, BOX_GAP } from "./Configs";
 
 export class Game extends PIXI.Container {
     private _app: PIXI.Application;
@@ -126,13 +126,31 @@ export class Game extends PIXI.Container {
         const wordPositions = positions[word];
         let wordLetters = word.split(""); // Kelimenin harfleri
 
-        wordPositions.forEach((position, index) => {
+        wordPositions.forEach((word, index) => {
             const letter = wordLetters[index];
             const text = new PIXI.Text(letter, { fontSize: 75, fill: 0xffff00 });
             text.anchor.set(0.5, 0.5);
-            text.position.set(position.x + GAME_WIDTH / 2, position.y + GAME_HEIGHT / 3); // Pozisyonu ekranda yerleştir
 
-            this.addLetter(text, letter); // Harfleri grid üzerinde göster
+            switch (word.direction) {
+                case COORDINATES.vertical:
+                    console.log("Vertical");
+                    switch (word.alignment) {
+                        case ALIGNMENTS.down:
+                            console.log("Down");
+                            text.position.set((GAME_WIDTH / 2), (GAME_HEIGHT / 3) + (BOX_GAP * index));
+                            break;
+                        case ALIGNMENTS.up:
+                            console.log("Up");
+                            text.position.set((GAME_WIDTH / 2), (GAME_HEIGHT / 3) - (BOX_GAP * index));
+                            break;
+                    }
+                    break;
+                case COORDINATES.horizontal:
+                    console.log("Horizontal");
+                    text.position.set((GAME_WIDTH / 2) + (BOX_GAP * index), (GAME_HEIGHT / 3));
+                    break;
+            }
+            this.addChild(text); // Harfleri grid üzerinde göster
         });
     }
 

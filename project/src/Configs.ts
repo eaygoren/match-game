@@ -31,47 +31,66 @@ export const LETTER_POSITIONS = [
     { x: 0, y: 75 }
 ];
 
+export enum COORDINATES {
+    horizontal = "horizontal",
+    vertical = "vertical"
+}
+
+export enum ALIGNMENTS {
+    left = "left",
+    up = "up",
+    down = "down"
+};
+
+export const BOX_GAP = 50;
+
 export const BOX_POSITIONS = [
     {
         "GOLD": [
-            { x: 80, y: 200 },
-            { x: 150, y: 150 },
-            { x: 300, y: 150 },
-            { x: 450, y: 150 }
+            { direction: COORDINATES.horizontal, alignment: ALIGNMENTS.left },
+            { direction: COORDINATES.horizontal, alignment: ALIGNMENTS.left },
+            { direction: COORDINATES.horizontal, alignment: ALIGNMENTS.left },
+            { direction: COORDINATES.horizontal, alignment: ALIGNMENTS.left },
         ]
     },
     {
         "GOD": [
-            { x: 0, y: 150 },
-            { x: 0, y: 300 },
-            { x: 0, y: 450 }
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.down },
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.down },
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.down },
         ]
     },
     {
         "LOG": [
-            { x: 300, y: 150 },
-            { x: 300, y: 300 },
-            { x: 300, y: 450 }
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.down },
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.down },
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.down },
         ]
     },
     {
         "DOG": [
-            { x: 0, y: 450 },
-            { x: 150, y: 450 },
-            { x: 300, y: 450 }
+            { direction: COORDINATES.horizontal, alignment: ALIGNMENTS.left },
+            { direction: COORDINATES.horizontal, alignment: ALIGNMENTS.left },
+            { direction: COORDINATES.horizontal, alignment: ALIGNMENTS.left },
         ]
     },
     {
         "OLD": [
-            { x: 150, y: 150 },
-            { x: 150, y: 0 },
-            { x: 150, y: -150 }
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.up },
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.up },
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.up },
         ]
     },
     {
         "DO": [
-            { x: 450, y: 150 },
-            { x: 450, y: 0 }
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.up },
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.up },
+        ]
+    },
+    {
+        "GO": [
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.up },
+            { direction: COORDINATES.vertical, alignment: ALIGNMENTS.up },
         ]
     }
 ];
