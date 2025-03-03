@@ -1,11 +1,11 @@
 import { core } from "./core";
 
 /**
- * Immediately Invoked Async Function Expression (IIFE) to initialize the core game scene.
+ * Oyunun başlangıç noktası
  */
 (async () => {
     /**
-     * Creates an instance of the core class and initializes it.
+     * core class'ını başlat ve mainScene değişkenine ata
      */
     const mainScene = await new core().init();
 })();

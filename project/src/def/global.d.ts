@@ -1,15 +1,15 @@
 import * as mitt from "mitt";
 import { EventNames } from "../EventBus";
 
-// Define the Events type, mapping event names to their associated data
+// Event isimlerini içeren enum
 export type Events = {
-    [EventNames.PlayerSucceeded]: void; // 'PlayerSucceeded' event
-    [EventNames.PlayerFailed]: void; // 'PlayerFailed' event
+    [EventNames.PlayerSucceeded]: void; // 'PlayerSucceeded' eventi
+    [EventNames.PlayerFailed]: void; // 'PlayerFailed' eventi
 };
 
-// Declare the global variable 'eventBus' which is an instance of the mitt emitter
+// mitt emitteri için global tanım
 declare global {
-    var eventBus: mitt.Emitter<Events>; // This allows us to use 'eventBus' globally in the project
+    var eventBus: mitt.Emitter<Events>; // Tüm projede eventBus değişkeni tanımla
 }
 
 export { };

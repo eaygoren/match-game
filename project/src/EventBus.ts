@@ -2,17 +2,17 @@ import mitt from "mitt";
 import { Events } from "./def/global";
 
 /**
- * Enum defining all event names used in the event bus.
+ * Tüm event isimlerini içeren enum
  */
 export enum EventNames {
-    /** Triggered when the player succeeded. */
+    // Oyuncunun başarılı olduğu durumlar
     PlayerSucceeded = "playerSucceeded",
     
-    /** Triggered when the player failed. */
+    // Oyuncunun başarısız olduğu durumlar
     PlayerFailed = "playerFailed",
 }
 
 /**
- * Global event bus for managing game-wide events.
+ * Tüm sınıfların erişebilmesi içim lobal event tanımı
  */
 export const eventBus = mitt<Events>();

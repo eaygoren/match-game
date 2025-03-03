@@ -9,9 +9,6 @@ globalThis.eventBus = eventBus;
 export class core extends PIXI.Container {
     private _app: PIXI.Application;
 
-    /**
-     * Initializes the core class and creates a new PIXI application.
-     */
     constructor() {
         super();
 
@@ -23,7 +20,7 @@ export class core extends PIXI.Container {
     }
 
     /**
-     * Asynchronous initialization of the core system, loading assets and setting up components.
+     * Sistemin asenkron başlatılması, assetlerin yüklenmesi ve componentlerin eklenmesi
      */
     async init() {
         await this._app.init({
@@ -49,7 +46,7 @@ export class core extends PIXI.Container {
     }
 
     /**
-     * Handles window resize events and adjusts the canvas size accordingly.
+     * Window resize eventine göre canvası ayarla.
      */
     onResize(): void {
         const screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
