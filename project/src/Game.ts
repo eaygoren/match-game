@@ -275,18 +275,12 @@ export class Game extends PIXI.Container {
 
     // Harfler arasında çizgi oluştur
     private createLine(from: PIXI.Text, to: PIXI.Text) {
-        const dx = to.x - from.x;
-        const dy = to.y - from.y;
-        const angle = Math.atan2(dy, dx);
+        let line = new PIXI.Graphics();
+        line.moveTo(from.x, from.y);
+        line.lineTo(to.x, to.y);
+        line.stroke({ color: "orange", width: 10 });
 
-        const lineSprite = PIXI.Sprite.from("line-orange");
-        lineSprite.anchor.set(0.5, 0.5);
-        lineSprite.scale.set(0.5, 0.5);
-        lineSprite.position.set(from.x + dx / 2, from.y + dy / 2);
-        lineSprite.rotation = angle;
-        lineSprite.width = Math.sqrt((dx * dx) + (dy * dy));
-
-        this._lineContainer.addChild(lineSprite);
+        this._lineContainer.addChild(line);
     }
 
     // Kelime bulunduğunda

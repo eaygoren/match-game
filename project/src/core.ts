@@ -1,10 +1,7 @@
 import * as PIXI from "pixi.js";
-import { eventBus } from "./EventBus";
 import { ASSETS, GAME_HEIGHT, GAME_WIDTH } from "./Configs";
 import { Background } from "./Background";
 import { Game } from "./Game";
-
-globalThis.eventBus = eventBus;
 
 export class core extends PIXI.Container {
     private _app: PIXI.Application;

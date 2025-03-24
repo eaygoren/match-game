@@ -9,8 +9,7 @@
     "types": ["pixi.js"]
   },
   "include": [
-    "project/src/**/*",
-    "project/src/def/**/*.ts"
+    "project/src/**/*"
   ],
   "exclude": ["node_modules", "project/dist"]
 }

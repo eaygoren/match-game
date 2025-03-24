@@ -1,19 +1,10 @@
 // Assetlerin yolları
 export const ASSETS = [
     { alias: "background",      src: "assets/environment/background.png" },
-    { alias: "bubble-orange",   src: "assets/environment/bubble-orange.png" },
-    { alias: "bubble-white",    src: "assets/environment/bubble-white.png" },
-    { alias: "cross",           src: "assets/environment/cross.png" },
     { alias: "hand",            src: "assets/environment/hand.png" },
-    { alias: "logo",            src: "assets/environment/logo.png" },
     { alias: "line-orange",     src: "assets/environment/line-orange.png" },
-    { alias: "panel-gray",      src: "assets/environment/panel-gray.png" },
-    { alias: "panel-green",     src: "assets/environment/panel-green.png" },
-    { alias: "panel-orange",    src: "assets/environment/panel-orange.png" },
-    { alias: "rect-orange",     src: "assets/environment/rect-orange.png" },
-    { alias: "rect-white",      src: "assets/environment/rect-white.png" },
+    { alias: "logo",            src: "assets/environment/logo.png" },
     { alias: "shuffle",         src: "assets/environment/shuffle.png" },
-    { alias: "tick",            src: "assets/environment/tick.png" }
 ];
 
 // Kelimeler
@@ -100,4 +91,5 @@ export enum DIMENTIONS {
 export const GAME_WIDTH = 480;
 export const GAME_HEIGHT = 800;
 
+// Tutorial için geçecek zaman
 export const IDLE_TIMER = 10000;

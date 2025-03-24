@@ -1,6 +1,6 @@
-# Slot Game Case Study
+# Word Puzzle Game Test Project
 
-This ad game was developed as a case study for the Playable Factory project using modern web technologies.
+This ad game was developed as a test project using modern web technologies.
 
 ## Table of Contents
 
@@ -34,4 +34,3 @@ The main technologies used in this project:
 - **Pixi.js** – 2D game engine
 - **Webpack** – For module and asset management
 - **GSAP** – For smooth animations
-- **mitt** – Lightweight event handling system
